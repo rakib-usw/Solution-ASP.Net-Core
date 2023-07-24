@@ -1,0 +1,17 @@
+DROP DATABASE downing
+Drop Table Investors;
+CREATE DATABASE downing
+CREATE TABLE Investors
+       (id INT NOT NULL PRIMARY KEY IDENTITY,
+        company_name VARCHAR(100) NOT NULL,
+        company_code VARCHAR(10) NOT NULL UNIQUE,
+        share_price DECIMAL(10,5) DEFAULT 0,
+        create_date DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        );
+INSERT INTO Investors(company_name, company_code, share_price) VALUES
+        ('SMITH & CO.','SM0001',0.00025),
+		('Digital-i.','DI0002',1.00329),
+		('DeSL.','DE0003',3.00696),
+		('Fashion Glory.','FA0004',2.00022),
+		('Delta Associate','DA0005',1.00019)
+	Select * from Investors

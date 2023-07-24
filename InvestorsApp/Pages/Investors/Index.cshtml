@@ -1,0 +1,31 @@
+﻿@page
+@model InvestorsApp.Pages.Investors.IndexModel
+@{
+}
+
+<br>
+<h2>List of Company</h2>
+<a class='btn btn-primary btn-sm' href='Investors/Create'>New Company</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>COMPANY NAME</th>
+			<th>COMPANY CODE</th>
+			<th>SHARE PRICE</th>
+			<th>CREATE DATE</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.listInvestors)
+		{
+			<tr>
+				<td>@item.id</td>
+				<td>@item.company_name</td>
+				<td>@item.company_code</td>
+				<td>@item.share_price</td>
+				<td>@item.create_date</td>
+			</tr>
+		}
+	</tbody>
+</table>
