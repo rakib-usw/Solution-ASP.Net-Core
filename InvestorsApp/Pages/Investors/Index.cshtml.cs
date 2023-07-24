@@ -19,7 +19,7 @@ namespace InvestorsApp.Pages.Investors
 
 				{
 					connection.Open();
-					string sql = "SELECT * FROM Investors";
+					string sql = "SELECT * FROM Investors ORDER BY company_name";
 					using (SqlCommand command = new SqlCommand(sql, connection))
 					{
 						using (SqlDataReader reader = command.ExecuteReader())
